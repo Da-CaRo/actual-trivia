@@ -1,3 +1,4 @@
+/* --- Header Styles --- */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -81,4 +82,38 @@ body {
 
 .login-button:hover {
     background-color: #0056b3;
+}
+
+/* Media Queries for responsive */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .header-left,
+    .header-center,
+    .header-right {
+        width: 100%;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+
+    .header-center ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-center li {
+        margin: 5px 0;
+    }
+
+    .header-left {
+        justify-content: center;
+    }
+
+    .header-right {
+        justify-content: center;
+    }
 }

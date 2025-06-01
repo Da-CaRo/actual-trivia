@@ -65,3 +65,28 @@
 .social-icons-box img:hover {
     transform: scale(1.1);
 }
+
+/* Media Queries for responsive */
+@media (max-width: 768px) {
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 15px;
+    }
+
+    .footer-left,
+    .footer-right {
+        flex-basis: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer-left:last-child,
+    .footer-right:last-child {
+        margin-bottom: 0;
+    }
+
+    .social-icons-box {
+        gap: 10px;
+    }
+}
