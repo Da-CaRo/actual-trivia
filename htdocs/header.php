@@ -13,7 +13,7 @@
         <nav class="header-center">
             <ul>
                 <li><a href="index.php">Inicio</a></li>
-                <li><a href="#">Preguntas</a></li>
+                <li><a href="select-topic.php">Preguntas</a></li>
                 <li><a href="#">Quiz</a></li>
                 <li><a href="#">Tablero</a></li>
             </ul>

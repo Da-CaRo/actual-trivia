@@ -1,0 +1,168 @@
+/* --- Content Section / Theme Selection --- */
+.content-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.theme-selection-title {
+    margin-bottom: 40px;
+}
+
+.theme-selection-title h2 {
+    font-size: 2.5em;
+    color: #333;
+    position: relative;
+    display: inline-block;
+}
+
+.theme-selection-title h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background-color: #007bff;
+    border-radius: 2px;
+}
+
+.themes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.theme-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(50% - 40px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    min-height: 120px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theme-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-item p {
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #555;
+    flex-grow: 1;
+}
+
+.placeholder-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.left-column {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.left-column p {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.right-column {
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.right-column p {
+    text-align: left;
+    margin-left: 20px;
+}
+
+/* Color for categories placeholder by IDs */
+#theme-image-1 {
+    background-color: #ffa500; /* Orange */
+}
+
+#theme-image-2 {
+    background-color: #00bfff; /* DeepSkyBlue */
+}
+
+#theme-image-3 {
+    background-color: #8b4513; /* SaddleBrown */
+}
+
+#theme-image-4 {
+    background-color: #008000; /* Green */
+}
+
+#theme-image-5 {
+    background-color: #ff69b4; /* HotPink */
+}
+
+#theme-image-6 {
+    background-color: yellow; /* Yellow */
+}
+
+
+/* Media Queries for responsive */
+@media (max-width: 900px) {
+    .theme-item {
+        width: calc(100% - 40px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .theme-item p {
+        text-align: center;
+        margin: 0;
+        margin-bottom: 15px;
+    }
+
+    .placeholder-image {
+        margin: 0;
+    }
+
+    .left-column, .right-column {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .theme-selection-title h2 {
+        font-size: 2em;
+    }
+
+    .themes-container {
+        gap: 20px;
+    }
+
+    .theme-item {
+        padding: 15px;
+        min-height: 100px;
+    }
+
+    .theme-item p {
+        font-size: 1.1em;
+    }
+
+    .placeholder-image {
+        width: 60px;
+        height: 60px;
+    }
+}
