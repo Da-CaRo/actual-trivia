@@ -42,6 +42,8 @@
         </div>
     </main>    </main>
     <?php include "footer.php" ?>
+
+    <script src="scripts/preloadQuestions.js"></script>
 </body>
 
 </html>
