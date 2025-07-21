@@ -162,6 +162,15 @@
 
         // Event listener for the "Back to Themes" button
         document.getElementById('back-to-themes-button').addEventListener('click', () => {
+            const currentQuestionId = document.getElementById('question-id').innerHTML;
+
+            if (!currentQuestionId) {
+                alert('No se pudo identificar la pregunta actual.');
+                return;
+            }
+
+            // Eliminar la pregunta actual del localStorage y marcarla como usada
+            markQuestionAsUsedAndRemoveFromCache(currentQuestionId);
             window.location.href = 'select-topic.php';
         });
 
