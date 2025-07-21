@@ -27,7 +27,7 @@ if ($conn->connect_error) {
 // 4. Consulta SQL para obtener las preguntas
 // Asume que tienes una tabla 'questions' con columnas 'id', 'enunciado', 'respuesta', 'tema_id', 'tipo'.
 // Puedes ajustar el LIMIT para obtener un número específico de preguntas.
-$sql = "SELECT * FROM q_and_a ORDER BY RAND() LIMIT 20"; // Ejemplo: 20 preguntas aleatorias
+$sql = "SELECT * FROM q_and_a ORDER BY RAND() LIMIT 30"; // Ejemplo: 30 preguntas aleatorias
 
 $result = $conn->query($sql);
 
