@@ -5,6 +5,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Clave para almacenar las preguntas en localStorage
     const localStorageKey = 'cachedQuestions';
 
+    // Temas requeridos (ajusta según tus temas)
+    const requiredTopics = ['sports&lei', 'geography', 'art&litera', 'science&na', 'entertainm', 'history']; // Ejemplo
+
+    function hasAllTopics(questions) {
+        const foundTopics = new Set();
+        questions.forEach(q => {
+            if (q.tema) foundTopics.add(q.tema);
+        });
+        return requiredTopics.every(topic => foundTopics.has(topic));
+    }
+
     async function preloadQuestions() {
         console.log('Intentando precargar preguntas...');
 
@@ -16,6 +27,15 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Preguntas encontradas en localStorage. No se realiza petición al servidor.');
             try {
                 const questions = JSON.parse(cachedQuestions);
+
+                // Verifica que haya al menos una pregunta de cada tema
+                if (!hasAllTopics(questions)) {
+                    console.warn('No hay al menos una pregunta de cada tema. Recargando del servidor...');
+                    localStorage.removeItem(localStorageKey);
+                    await fetchAndStoreQuestions();
+                    return;
+                }
+
                 // Opcional: Puedes hacer algo con las preguntas aquí si las necesitas inmediatamente
                 // Por ejemplo, pasar 'questions' a alguna otra función en tu app
                 console.log('Preguntas cargadas desde localStorage:', questions.length, 'preguntas.');
