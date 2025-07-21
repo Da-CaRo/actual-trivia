@@ -113,11 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     skipButton.addEventListener('click', () => {
-        alert('Pregunta omitida (o lógica para pasar a la siguiente pregunta).');
         resetTimer();
-    });
-
-    backToThemesButton.addEventListener('click', () => {
-        window.location.href = 'index.html';
     });
 });
