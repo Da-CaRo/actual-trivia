@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <link href="styles/footer.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-        <footer class="main-footer">
+    <footer class="main-footer">
         <div class="footer-left">
             <h3>Enlaces de Interés</h3>
             <ul>
@@ -14,6 +16,18 @@
                 <li><a href="#">Preguntas Frecuentes</a></li>
                 <li><a href="#">Trabaja con Nosotros</a></li>
                 <li><a href="#">Mapa del Sitio</a></li>
+                <li>
+                    <a href="#"
+                        onclick="localStorage.removeItem('cachedQuestions'); alert('cachedQuestions eliminado'); return false;">
+                        Eliminar cachedQuestions
+                    </a>
+                </li>
+                <li>
+                    <a href="#"
+                        onclick="localStorage.removeItem('usedQuestions'); alert('usedQuestions eliminado'); return false;">
+                        Eliminar usedQuestions
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="footer-right">
@@ -38,4 +52,5 @@
         </div>
     </footer>
 </body>
+
 </html>
